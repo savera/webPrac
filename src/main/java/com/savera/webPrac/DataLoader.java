@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class DataLoader {
 
+	
 	private PostRepository postRepo;
 
 	@Autowired
@@ -20,9 +21,15 @@ public class DataLoader {
 	@PostConstruct
 	private void loadData() {
 
-		postRepo.save(new Post("title 1", "hello", new Date())); 
-		postRepo.save(new Post("title 2", "hello world", new Date())); 
-		postRepo.save(new Post("title 3", "hello universe", new Date())); 
+		postRepo.save(new Post( "title 1", "hello", new Date())); 
+		postRepo.save(new Post( "title 2", "hello world", new Date())); 
+		postRepo.save(new Post( "title 3", "hello universe", new Date())); 
+		
+	}
+	
+	Iterable<Post> getAllPosts() {
+		
+		return postRepo.findAll();
 		
 	}
 }

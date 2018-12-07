@@ -4,35 +4,36 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-import org.springframework.data.annotation.Id;
+
 
 @Entity 
 public class Post {
 	@Id
 	@GeneratedValue
-	private	long id; 
+	private	Long id; 
 	private String title; 
 	private String body; 
 	private Date postedOn; 
 	
-	Post(){
+	private Post(){
 		
 	}
 	
-	public Post( String title, String body, Date posted) {
+	public Post(String title, String body, Date posted) {
 
+	
 		this.title = title; 
 		this.body = body; 
 		this.postedOn = posted; 
 		
 	}
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 	
-	@Id
 	public void setId(Long id) {
 		this.id = id;
 	}
