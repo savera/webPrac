@@ -1,0 +1,19 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Times New Roman", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+h2 {
+  color: #FF0000;
+}
+
+p{
+ color: #000000;
+}
